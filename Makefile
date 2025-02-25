@@ -1,9 +1,9 @@
 TEX = lualatex
 VIEWER = evince
-TEXFLAGS = 
+TEXFLAGS = -output-directory build/
 
 letter:
 	$(TEX) $(TEXFLAGS) $(FILE).tex
 
 show:
-	$(VIEWER) $(FILE).pdf &
+	$(VIEWER) build/$(FILE).pdf &
